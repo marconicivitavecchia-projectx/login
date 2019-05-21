@@ -7,10 +7,11 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title id="app_title">Dromitx</title>
   <link rel="stylesheet" href="style.css">
+  <script src="./app.js"></script>
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css"
     integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
   <script src="./jquery-3.3.1.min.js"></script>
-  <script src="./app.js"></script>
+  
 </head>
 
 <body>
@@ -53,21 +54,17 @@
       </div>
       <!--- Log in --->
       <div class="log-in-icon">
-        <button id="loginbtn" onclick="showLogin()" title="Log In" class="log-in-icon">
+        <button onclick="document.getElementsByClassName('login-container').style.visibility='visible'" id="loginbtn"  title="Log In" class="log-in-icon">
           <i class="fas fa-user-circle"></i>
         </button>
       </div>
     </div>
-
-    <script>
-        document.getElementById("loginbtn").addEventListener("click", function(){
-          document.getElementById("box-content").innerHTML = x;
-        });
-        </script>
-
+    
         <div id="box-content"></div>
- <!-- 
-   <div class="body-container">
+
+
+  <div class="the-container">
+   <div class="login-container">
     <form action="/action_page.php">
       <div class="container">
         <label for="uname"><b>Username</b></label>
@@ -88,7 +85,26 @@
       </div>
     </form>
   </div>
-  -->
+
+
+  <div class="register-container">
+    <form action="/action_page.php">
+      <div class="container">
+        <label for="uname"><b>Username</b></label>
+        <input type="text" placeholder="Enter Username" name="uname" required>
+
+        <label for="email"><b>E-mail</b></label>
+        <input type="email" placeholder="Enter E-mail" name="email" required>
+
+        <label for="psw"><b>Password</b></label>
+        <input type="password" placeholder="Enter Password" name="psw" required>
+
+        <button class="btn" type="submit">Register</button>
+        
+      </div>
+    </form>
+  </div>
+</div>
 </body>
 
 </html>

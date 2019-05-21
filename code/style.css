@@ -15,7 +15,7 @@ form {
   background-color: transparent;
 }
 
-input[type=text], input[type=password] {
+input[type=text], input[type=password],input[type=email] {
   width: 100%;
   padding: 12px 20px;
   margin: 8px 0;
@@ -210,12 +210,25 @@ img.avatar {
   font-size: 200%;
   margin-left: 35%;
 }
-.body-container{
-  margin-left: 25%;
+.login-container{
+  margin-left: 23%;
   width: 150%;
   background-color:transparent;
   padding-bottom: 32px;
+  z-index: -1;
+  display: inline-block;
+  position: absolute;
   
+}
+.register-container{
+  margin-left: 23%;
+  width: 150%;
+  background-color:transparent;
+  padding-bottom: 32px;
+  z-index: 1;
+  display: inline-block;
+  position: absolute;
+  visibility: hidden;
 }
 .container {
   padding: 16px;
@@ -240,6 +253,7 @@ img.avatar {
   font-size: 250%;
   display: inline-block;
   border: none;
+  
 }
 
 

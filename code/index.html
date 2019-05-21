@@ -2,48 +2,93 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title id="app_title">Dromitx</title>
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
-    <script src="./jquery-3.3.1.min.js"></script>
-    <script src="./app.js"></script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title id="app_title">Dromitx</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css"
+    integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+  <script src="./jquery-3.3.1.min.js"></script>
+  <script src="./app.js"></script>
 </head>
 
 <body>
+  <!---Clouds-->
+
+  <div id="background-wrap">
+      <div class="x1">
+          <div class="cloud"></div>
+      </div>
+  
+      <div class="x2">
+          <div class="cloud"></div>
+      </div>
+  
+      <div class="x3">
+          <div class="cloud"></div>
+      </div>
+  
+      <div class="x4">
+          <div class="cloud"></div>
+      </div>
+  
+      <div class="x5">
+          <div class="cloud"></div>
+      </div>
+  </div>
+
+
+  <div class="head-container">
     <h2>DROMOTIX</h2>
-
-<form action="/action_page.php">
-  <div  class="container">
-    <i class="fas fa-door-open"></i>
-    <!--- Log in --->
-    <i class="fas fa-user-circle"></i>
-    <!--- Sign in --->
   </div>
-  
-    
-  
 
-  <div class="container">
-    <label for="uname"><b>Username</b></label>
-    <input type="text" placeholder="Enter Username" name="uname" required>
-
-    <label for="psw"><b>Password</b></label>
-    <input type="password" placeholder="Enter Password" name="psw" required>
+  <div class="icon-container">
+      <!--- Sign in --->
+      <div class="sign-in-door">
+        <button title="Sign in" class="sign-in-door">
+          <i class="fas fa-door-open"></i>
+        </button>
         
-    <button type="submit">Login</button>
-    <label>
-      <input type="checkbox" checked="checked" name="remember"> Remember me
-    </label>
-  </div>
+      </div>
+      <!--- Log in --->
+      <div class="log-in-icon">
+        <button id="loginbtn" onclick="showLogin()" title="Log In" class="log-in-icon">
+          <i class="fas fa-user-circle"></i>
+        </button>
+      </div>
+    </div>
 
-  <div class="container" style="background-color:#f1f1f1">
-    <button type="button" class="cancelbtn">Cancel</button>
-    <span class="psw">Forgot <a href="#">password?</a></span>
+    <script>
+        document.getElementById("loginbtn").addEventListener("click", function(){
+          document.getElementById("box-content").innerHTML = x;
+        });
+        </script>
+
+        <div id="box-content"></div>
+ <!-- 
+   <div class="body-container">
+    <form action="/action_page.php">
+      <div class="container">
+        <label for="uname"><b>Username</b></label>
+        <input type="text" placeholder="Enter Username" name="uname" required>
+
+        <label for="psw"><b>Password</b></label>
+        <input type="password" placeholder="Enter Password" name="psw" required>
+
+        <button class="btn" type="submit">Login</button>
+        <label>
+          <input type="checkbox" checked="checked" name="remember"> Remember me
+        </label>
+      </div>
+
+      <div class="container-psw">
+        <button type="button" class="cancelbtn">Cancel</button>
+        <span class="psw">Forgot <a href="#">password?</a></span>
+      </div>
+    </form>
   </div>
-</form>
+  -->
 </body>
 
 </html>
